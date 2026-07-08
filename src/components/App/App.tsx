@@ -30,14 +30,17 @@ function App() {
         <VoteOptions
           onVote={handleVote}
           onReset={resetVotes}
-          canReset={true}
+          canReset={totalVotes > 0}
         ></VoteOptions>
-        <VoteStats
-          votes={votes}
-          totalVotes={totalVotes}
-          positiveRate={positiveRate}
-        ></VoteStats>
-        <Notification></Notification>
+        {totalVotes > 0 ? (
+          <VoteStats
+            votes={votes}
+            totalVotes={totalVotes}
+            positiveRate={positiveRate}
+          ></VoteStats>
+        ) : (
+          <Notification></Notification>
+        )}
       </div>
     </>
   );
