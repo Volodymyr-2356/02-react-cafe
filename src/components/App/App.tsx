@@ -6,7 +6,7 @@ import CafeInfo from "../CafeInfo/CafeInfo.tsx";
 import VoteOptions from "../VoteOptions/VoteOptions.tsx";
 import VoteStats from "../VoteStats/VoteStats.tsx";
 import Notification from "../Notification/Notification.tsx";
-import "modern-normalize"; // npm modern-normalize
+import "modern-normalize/modern-normalize.css"; // npm modern-normalize
 
 function App() {
   const [votes, setVotes] = useState<Votes>({ good: 0, neutral: 0, bad: 0 });
